@@ -4,7 +4,9 @@
 const workerElements = document.querySelector('ul');
 
 function convertToNumber(string) {
-  return +string.slice(1).replaceAll(',', '');
+  const numberStart = string.split('').findIndex((sym) => !Number.isNaN(+sym));
+
+  return +string.trim().slice(numberStart).replaceAll(',', '');
 }
 
 function sortList(list) {
