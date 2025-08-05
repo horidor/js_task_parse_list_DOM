@@ -19,7 +19,7 @@ function sortList(list) {
 }
 
 function getEmployees(list) {
-  // There is no dataset.name value in index.html, and I can't change index.html.
+  // There is no dataset.name value in index.html, I can't change index.html.
   // Therefore, i can only access it with item.innerText.
   return Array.from(list.children).map((item) => ({
     ...item.dataset,
